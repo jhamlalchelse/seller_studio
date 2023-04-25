@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  FlatList,
   Image,
   ImageBackground,
   ScrollView,
@@ -9,6 +10,10 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import Icon from 'react-native-vector-icons/FontAwesome';
+import EvilIcon from 'react-native-vector-icons/EvilIcons'
 
 const Home = () => {
   return (
@@ -318,7 +323,13 @@ const Home = () => {
             </ImageBackground>
 
             {/* Request Form  */}
-            <View style={{backgroundColor: '#fff', opacity: 0.7, marginHorizontal: 10, borderRadius: 10}}>
+            <View
+              style={{
+                backgroundColor: '#fff',
+                opacity: 0.7,
+                marginHorizontal: 10,
+                borderRadius: 10,
+              }}>
               <Text
                 style={{
                   textAlign: 'center',
@@ -326,7 +337,7 @@ const Home = () => {
                   fontSize: 25,
                   fontFamily: 'serif',
                   marginTop: 25,
-                  marginBottom: 10
+                  marginBottom: 10,
                 }}>
                 Request a quote
               </Text>
@@ -388,7 +399,7 @@ const Home = () => {
               <TextInput
                 placeholder="Enter your name"
                 style={{
-                  borderWidth: .9,
+                  borderWidth: 0.9,
                   paddingHorizontal: 15,
                   paddingVertical: 7,
                   marginVertical: 10,
@@ -413,7 +424,450 @@ const Home = () => {
           </ImageBackground>
         </View>
 
-        
+        {/* Businesses /Ecosystem /Stakeholders */}
+        <View style={{marginTop: 20}}>
+          <Text style={styles.textHeading}>
+            Businesses /Ecosystem /Stakeholders
+          </Text>
+          <Text
+            style={{
+              fontSize: 17,
+              fontFamily: 'san-serif',
+              fontWeight: '600',
+              color: '#333',
+              textAlign: 'center',
+              paddingHorizontal: 12,
+            }}>
+            We are dedicated to meeting all of your requirements in a single
+            platform.
+          </Text>
+          <Text
+            style={{
+              fontSize: 17,
+              fontFamily: 'san-serif',
+              fontWeight: '600',
+              color: '#333',
+              textAlign: 'center',
+              paddingHorizontal: 12,
+              marginBottom: 10,
+            }}>
+            This is your opportunity to present your efforts to the global
+            market at any time and from any location!
+          </Text>
+
+          <View style={{marginVertical: 20}}>
+            {/* Buyer */}
+            <View>
+              <View
+                style={{
+                  backgroundColor: '#88bc8f',
+                  alignSelf: 'center',
+                  borderRadius: 5,
+                  padding: 10,
+                }}>
+                <Image
+                  source={require('../src/assets/images/buyer_businesses_img.png')}
+                  resizeMode="contain"
+                  style={{width: 200, height: 170}}
+                />
+              </View>
+              <Text
+                style={{
+                  textAlign: 'center',
+                  fontSize: 23,
+                  color: '#333',
+                  fontWeight: '700',
+                  fontFamily: 'georgia',
+                  marginVertical: 10,
+                }}>
+                Buyer
+              </Text>
+              <Text
+                style={{
+                  marginHorizontal: 15,
+                  textAlign: 'center',
+                  color: '#333',
+                }}>
+                Buy without the hassle and from a credible system for all of
+                your needs - it will be delivered straight to your door.
+              </Text>
+            </View>
+            {/* Seller */}
+            <View style={{marginVertical: 30}}>
+              <View
+                style={{
+                  backgroundColor: '#88bc8f',
+                  alignSelf: 'center',
+                  borderRadius: 5,
+                  padding: 10,
+                }}>
+                <Image
+                  source={require('../src/assets/images/seller_businesses_img.png')}
+                  resizeMode="contain"
+                  style={{width: 200, height: 170}}
+                />
+              </View>
+              <Text
+                style={{
+                  textAlign: 'center',
+                  fontSize: 23,
+                  color: '#333',
+                  fontWeight: '700',
+                  fontFamily: 'georgia',
+                  marginVertical: 10,
+                }}>
+                Seller
+              </Text>
+              <Text
+                style={{
+                  marginHorizontal: 15,
+                  textAlign: 'center',
+                  color: '#333',
+                }}>
+                Get the best prices from a diverse range of buyers and present
+                your efforts to the global and local markets.
+              </Text>
+            </View>
+            {/* Value-added Services */}
+            <View>
+              <View
+                style={{
+                  backgroundColor: '#88bc8f',
+                  alignSelf: 'center',
+                  borderRadius: 5,
+                  padding: 10,
+                }}>
+                <Image
+                  source={require('../src/assets/images/value-added-services_businesses_img.png')}
+                  resizeMode="contain"
+                  style={{width: 200, height: 170}}
+                />
+              </View>
+              <Text
+                style={{
+                  textAlign: 'center',
+                  fontSize: 23,
+                  color: '#333',
+                  fontWeight: '700',
+                  fontFamily: 'georgia',
+                  marginVertical: 10,
+                }}>
+                Value-added Services
+              </Text>
+              <Text
+                style={{
+                  marginHorizontal: 15,
+                  textAlign: 'center',
+                  color: '#333',
+                }}>
+                All of the following services are offered by Cropway through
+                internal operations and our network of specialised partners.
+              </Text>
+            </View>
+          </View>
+        </View>
+
+        {/* How To Order */}
+        <View>
+          <Text style={[styles.textHeading, {marginVertical: 5}]}>
+            How to Orders
+          </Text>
+          <ScrollView
+            horizontal={true}
+            contentContainerStyle={{flexDirection: 'row'}}>
+            <Image
+              source={require('../src/assets/images/how-to-order.png')}
+              resizeMode="contain"
+            />
+          </ScrollView>
+        </View>
+
+        {/* Why choose us? */}
+        <View style={{backgroundColor: 'rgba(217, 217, 217, 0.2)'}}>
+          <Text style={styles.textHeading}>Why Choose Us?</Text>
+          <View>
+            <Image
+              source={require('../src/assets/images/why-choose-us_img1.jpg')}
+              resizeMode="stretch"
+              style={{height: 200, width: '90%', alignSelf: 'center'}}
+            />
+            <Text
+              style={{
+                marginHorizontal: '6%',
+                marginTop: 10,
+                fontSize: 14,
+                fontFamily: 'serif',
+                color: '#333',
+              }}>
+              Farm-to-fork fresh produce delivery is made possible through
+              Cropway's Seller Studio, a platform for collaboration between
+              stakeholders in the Agri value chain that incorporates technology
+              and the agribusiness network.
+            </Text>
+          </View>
+
+          <View style={{marginVertical: 30}}>
+            <Image
+              source={require('../src/assets/images/why-choose-us_img2.jpg')}
+              resizeMode="stretch"
+              style={{height: 200, width: '90%', alignSelf: 'center'}}
+            />
+            <Text
+              style={{
+                marginHorizontal: '6%',
+                marginTop: 10,
+                fontSize: 14,
+                fontFamily: 'serif',
+                color: '#333',
+              }}>
+              It is a high-quality, cost-effective, and adaptable agricultural
+              supply chain solution. On top of routine estimates, we've layered
+              AI/ML-based precision demand planning, as well as integrated and
+              secure platform payment processes. Cropway will assist you in
+              seamlessly meeting the needs of your end-users.
+            </Text>
+          </View>
+
+          <Image
+            source={require('../src/assets/images/cropway-services1.png')}
+            resizeMode="contain"
+            style={{height: 120, width: '90%', alignSelf: 'center'}}
+          />
+        </View>
+
+        {/* Our Technology */}
+        <View style={{backgroundColor: '#e0ffff', marginTop: 30}}>
+          <Text style={[styles.textHeading]}>Our Technology</Text>
+
+          <View style={{position: 'relative', marginVertical: 20}}>
+            <View>
+              {[1, 2, 3, 4, 5, 6]?.map((item, index) => {
+                return (
+                  <View
+                    style={{
+                      flexDirection: 'row',
+                      alignItems: 'center',
+                      backgroundColor: 'lightblue',
+                      marginBottom: 15,
+                      borderRadius: 5,
+                      paddingHorizontal: 25,
+                      alignSelf: 'center',
+                    }}
+                    key={index}>
+                    <View>
+                      <Image
+                        source={require('../src/assets/images/real-time-monitor.png')}
+                        resizeMode="contain"
+                        style={{height: 100}}
+                      />
+                    </View>
+                    <View>
+                      <Text
+                        style={{
+                          fontSize: 17,
+                          color: '#333',
+                          paddingLeft: 20,
+                          width: 160,
+                          textAlign: 'center',
+                        }}>
+                        Smart weather agri advisory
+                      </Text>
+                    </View>
+                  </View>
+                );
+              })}
+            </View>
+            <Image
+              source={require('../src/assets/images/our-tech-drone-img.png')}
+              resizeMode="contain"
+              style={{
+                position: 'absolute',
+                bottom: -50,
+                left: -50,
+                zIndex: -1,
+              }}
+            />
+          </View>
+        </View>
+
+        {/* Get In Touch */}
+        <View style={{backgroundColor: '#e0ffff', position: 'relative'}}>
+          <Text style={[styles.textHeading, {marginTop: 35, marginBottom: 5}]}>
+            Get In Touch
+          </Text>
+          <Text
+            style={{
+              textAlign: 'center',
+              fontSize: 15,
+              fontFamily: 'serif',
+              color: '#333',
+              marginBottom: 45,
+            }}>
+            Leave us a message
+          </Text>
+          {/* form */}
+          <View
+            style={{
+              backgroundColor: '#f0f8ff',
+              paddingHorizontal: 10,
+              marginHorizontal: 15,
+            }}>
+            <View style={{marginVertical: 10}}>
+              <Text
+                style={{
+                  paddingLeft: 25,
+                  marginBottom: 10,
+                  fontSize: 17,
+                  fontFamily: 'serif',
+                  color: '#333',
+                }}>
+                Name
+              </Text>
+              <TextInput
+                placeholder="Name"
+                style={{
+                  borderWidth: 0.8,
+                  padding: 7,
+                  paddingHorizontal: 20,
+                  fontSize: 17,
+                  fontFamily: 'serif',
+                  marginHorizontal: 20,
+                  borderRadius: 10,
+                  color: '#333',
+                }}
+              />
+            </View>
+            <View style={{marginVertical: 10}}>
+              <Text
+                style={{
+                  paddingLeft: 25,
+                  marginBottom: 10,
+                  fontSize: 17,
+                  fontFamily: 'serif',
+                  color: '#333',
+                }}>
+                Email Address *
+              </Text>
+              <TextInput
+                placeholder="Enter Email"
+                style={{
+                  borderWidth: 0.8,
+                  padding: 7,
+                  paddingHorizontal: 20,
+                  fontSize: 17,
+                  fontFamily: 'serif',
+                  color: '#333',
+                  marginHorizontal: 20,
+                  borderRadius: 10,
+                }}
+              />
+            </View>
+            <View style={{marginVertical: 10}}>
+              <Text
+                style={{
+                  paddingLeft: 25,
+                  marginBottom: 10,
+                  fontSize: 17,
+                  fontFamily: 'serif',
+                  color: '#333',
+                }}>
+                Contact Number *
+              </Text>
+              <TextInput
+                placeholder="Enter Number"
+                style={{
+                  borderWidth: 0.8,
+                  padding: 7,
+                  paddingHorizontal: 20,
+                  fontSize: 17,
+                  fontFamily: 'serif',
+                  color: '#333',
+                  marginHorizontal: 20,
+                  borderRadius: 10,
+                }}
+              />
+            </View>
+
+            <View style={{marginVertical: 10}}>
+              <Text
+                style={{
+                  paddingLeft: 25,
+                  marginBottom: 10,
+                  fontSize: 17,
+                  fontFamily: 'serif',
+                  color: '#333',
+                }}>
+                Your Message *
+              </Text>
+              <TextInput
+                multiline={true}
+                numberOfLines={10}
+                style={{
+                  height: 100,
+                  borderWidth: 0.8,
+                  padding: 7,
+                  paddingHorizontal: 20,
+                  fontSize: 17,
+                  fontFamily: 'serif',
+                  color: '#333',
+                  marginHorizontal: 20,
+                  borderRadius: 10,
+                  textAlignVertical: 'top',
+                }}
+              />
+            </View>
+            <TouchableOpacity
+              style={{
+                flexDirection: 'row',
+                justifyContent: 'flex-start',
+                marginLeft: 20,
+              }}>
+              <Text
+                style={{
+                  padding: 10,
+                  paddingHorizontal: 30,
+                  fontSize: 18,
+                  fontFamily: 'serif',
+                  color: '#fff',
+                  backgroundColor: '#4682b4',
+                  alignSelf: 'center',
+                  borderRadius: 5,
+                  marginVertical: 20,
+                }}>
+                Send Message
+              </Text>
+            </TouchableOpacity>
+          </View>
+
+          <Image
+            source={require('../src/assets/images/get-in-touch-img.png')}
+            resizeMode="contain"
+            // style={{
+            //   position: 'absolute',
+            //   bottom: -50,
+            //   left: 0,
+            //   zIndex: -1
+            // }}
+          />
+        </View>
+
+        {/* Footer */}
+        <View style={{backgroundColor: 'green'}}>
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+            >
+            <Ionicons
+              name="home-outline"
+              size={20}
+              color={'white'}
+              style={{marginHorizontal: 10}}
+            />
+          </View>
+        </View>
       </ScrollView>
     </>
   );
@@ -424,7 +878,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 25,
     marginVertical: 15,
-    fontWeight: '600',
+    fontWeight: '700',
     color: '#333',
     fontFamily: 'serif',
   },
