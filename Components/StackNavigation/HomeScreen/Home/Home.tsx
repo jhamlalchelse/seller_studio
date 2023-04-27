@@ -113,7 +113,7 @@ const Home = ({navigation}: any) => {
               resizeMode="cover"
               imageStyle={{opacity: 0.5, backgroundColor: 'black'}}
               style={{width: '100%', height: 350}}>
-              <View style={{marginVertical: 30}}>
+              <View style={{paddingVertical: 30}}>
                 <Text
                   style={{
                     textAlign: 'center',
@@ -140,10 +140,10 @@ const Home = ({navigation}: any) => {
                   </Text>
                 </TouchableOpacity>
                 <View style={{padding: 14}}>
-                  <Text style={[styles.ourSolTextPara]}>
+                  <Text style={[styles.ourSolTextPara,{lineHeight: 23}]}>
                     We do not buy or sell crops, and we do not act as brokers.
                   </Text>
-                  <Text style={[styles.ourSolTextPara]}>
+                  <Text style={[styles.ourSolTextPara,{lineHeight: 23}]}>
                     Rather, we provide you with the option of easily marketing
                     deliver the fastest harvest-to-retail in the industry via
                     our online platform.
@@ -254,8 +254,9 @@ const Home = ({navigation}: any) => {
                       fontFamily: 'serif',
                       paddingRight: 30,
                       color: '#220',
+                      width: 175
                     }}>
-                    {item.category}
+                   {item.category}
                   </Text>
                   <Text
                     style={{
@@ -597,6 +598,7 @@ const Home = ({navigation}: any) => {
             </View>
             {/* Seller */}
             <View style={{marginVertical: 30}}>
+            <TouchableOpacity onPress={() => navigation.navigate('Seller')}>
               <View
                 style={{
                   backgroundColor: '#88bc8f',
@@ -630,9 +632,12 @@ const Home = ({navigation}: any) => {
                 Get the best prices from a diverse range of buyers and present
                 your efforts to the global and local markets.
               </Text>
+              </TouchableOpacity>
             </View>
             {/* Value-added Services */}
             <View>
+            <TouchableOpacity onPress={() => navigation.navigate('ValueAddedService')}>
+
               <View
                 style={{
                   backgroundColor: '#88bc8f',
@@ -666,6 +671,7 @@ const Home = ({navigation}: any) => {
                 All of the following services are offered by Cropway through
                 internal operations and our network of specialised partners.
               </Text>
+              </TouchableOpacity>
             </View>
           </View>
         </View>
@@ -701,6 +707,7 @@ const Home = ({navigation}: any) => {
                 fontSize: 14,
                 fontFamily: 'serif',
                 color: '#000',
+                lineHeight: 21,
               }}>
               Farm-to-fork fresh produce delivery is made possible through
               Cropway's Seller Studio, a platform for collaboration between
@@ -722,6 +729,7 @@ const Home = ({navigation}: any) => {
                 fontSize: 14,
                 fontFamily: 'serif',
                 color: 'black',
+                lineHeight: 21,
               }}>
               It is a high-quality, cost-effective, and adaptable agricultural
               supply chain solution. On top of routine estimates, we've layered
