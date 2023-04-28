@@ -2,6 +2,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer'
 import React from 'react'
 import { Text } from 'react-native'
 import MainScreen from '../StackNavigation/MainScreen'
+import AddProductStack from '../AddProduct/AddProductStack'
 
 const Drawer = createDrawerNavigator()
 const RootDrawerNav = () => {
@@ -17,6 +18,7 @@ const RootDrawerNav = () => {
       headerTitleAlign: 'center',
     }}>
       <Drawer.Screen name='MainScreen' component={MainScreen} />
+      <Drawer.Screen name='AddProduct' component={AddProductStack} />
     </Drawer.Navigator>
   )
 }
