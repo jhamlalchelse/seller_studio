@@ -4,7 +4,7 @@ import SelectCategory from './SelectCategory'
 import AddProduct from './AddProduct'
 
 const Stack = createStackNavigator()
-const AddProductStack = () => {
+const ProductStack = () => {
   return (
     <Stack.Navigator screenOptions={{
       // headerShown: false
@@ -15,4 +15,4 @@ const AddProductStack = () => {
   )
 }
 
-export default AddProductStack
+export default ProductStack

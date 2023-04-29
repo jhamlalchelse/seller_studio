@@ -8,8 +8,8 @@ import Address from './Address';
 import Quality from './Quality';
 import AdditionalComment from './Comment';
 import ProofOfQCert from './ProofOfQCert';
-import BorderBottom from './BorderBottom';
-import HeaderHeading from './HeaderHeading';
+import BorderBottom from '../BorderBottom';
+import HeaderHeading from '../HeaderHeading';
 
 const AddProduct = ({route}: any) => {
   const product = route.params.item;
