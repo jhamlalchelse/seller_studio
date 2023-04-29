@@ -4,6 +4,7 @@ import SelectDropdown from 'react-native-select-dropdown';
 import Select from './Select';
 import {ScrollView} from 'react-native-gesture-handler';
 import DatePicker from './DatePicker';
+import DocumentPicker from './DocumentPicker';
 
 const AddProduct = ({route}: any) => {
   const product = route.params.item;
@@ -323,10 +324,18 @@ const AddProduct = ({route}: any) => {
               }}>
               Variety Purity(min.%)
             </Text>
-            <Select
-              data={['kg', 'quintal', 'metric ton']}
-              defaultValue={availableUnit}
-              setSelectValue={setAvailableUnit}
+            <TextInput
+              inputMode="numeric"
+              style={{
+                fontSize: 17,
+                fontFamily: 'serif',
+                borderWidth: 1,
+                padding: 10,
+                borderRadius: 5,
+                width: '95%',
+                marginVertical: 10,
+                backgroundColor: 'white',
+              }}
             />
           </View>
 
@@ -340,10 +349,18 @@ const AddProduct = ({route}: any) => {
               }}>
               Moisture (max.%)
             </Text>
-            <Select
-              data={['kg', 'quintal', 'metric ton']}
-              defaultValue={availableUnit}
-              setSelectValue={setAvailableUnit}
+            <TextInput
+              inputMode="numeric"
+              style={{
+                fontSize: 17,
+                fontFamily: 'serif',
+                borderWidth: 1,
+                padding: 10,
+                borderRadius: 5,
+                width: '95%',
+                marginVertical: 10,
+                backgroundColor: 'white',
+              }}
             />
           </View>
 
@@ -357,10 +374,18 @@ const AddProduct = ({route}: any) => {
               }}>
               Protein (min.%)
             </Text>
-            <Select
-              data={['kg', 'quintal', 'metric ton']}
-              defaultValue={availableUnit}
-              setSelectValue={setAvailableUnit}
+            <TextInput
+              inputMode="numeric"
+              style={{
+                fontSize: 17,
+                fontFamily: 'serif',
+                borderWidth: 1,
+                padding: 10,
+                borderRadius: 5,
+                width: '95%',
+                marginVertical: 10,
+                backgroundColor: 'white',
+              }}
             />
           </View>
 
@@ -374,10 +399,18 @@ const AddProduct = ({route}: any) => {
               }}>
               Protein (max.%)
             </Text>
-            <Select
-              data={['kg', 'quintal', 'metric ton']}
-              defaultValue={availableUnit}
-              setSelectValue={setAvailableUnit}
+            <TextInput
+              inputMode="numeric"
+              style={{
+                fontSize: 17,
+                fontFamily: 'serif',
+                borderWidth: 1,
+                padding: 10,
+                borderRadius: 5,
+                width: '95%',
+                marginVertical: 10,
+                backgroundColor: 'white',
+              }}
             />
           </View>
 
@@ -391,10 +424,18 @@ const AddProduct = ({route}: any) => {
               }}>
               Caliber {'>'} 2,2mm (min.%)
             </Text>
-            <Select
-              data={['kg', 'quintal', 'metric ton']}
-              defaultValue={availableUnit}
-              setSelectValue={setAvailableUnit}
+            <TextInput
+              inputMode="numeric"
+              style={{
+                fontSize: 17,
+                fontFamily: 'serif',
+                borderWidth: 1,
+                padding: 10,
+                borderRadius: 5,
+                width: '95%',
+                marginVertical: 10,
+                backgroundColor: 'white',
+              }}
             />
           </View>
 
@@ -408,10 +449,18 @@ const AddProduct = ({route}: any) => {
               }}>
               Caliber {'>'} 2,2mm (max.%)
             </Text>
-            <Select
-              data={['kg', 'quintal', 'metric ton']}
-              defaultValue={availableUnit}
-              setSelectValue={setAvailableUnit}
+            <TextInput
+              inputMode="numeric"
+              style={{
+                fontSize: 17,
+                fontFamily: 'serif',
+                borderWidth: 1,
+                padding: 10,
+                borderRadius: 5,
+                width: '95%',
+                marginVertical: 10,
+                backgroundColor: 'white',
+              }}
             />
           </View>
 
@@ -425,10 +474,18 @@ const AddProduct = ({route}: any) => {
               }}>
               Broken grains (max.%)
             </Text>
-            <Select
-              data={['kg', 'quintal', 'metric ton']}
-              defaultValue={availableUnit}
-              setSelectValue={setAvailableUnit}
+            <TextInput
+              inputMode="numeric"
+              style={{
+                fontSize: 17,
+                fontFamily: 'serif',
+                borderWidth: 1,
+                padding: 10,
+                borderRadius: 5,
+                width: '95%',
+                marginVertical: 10,
+                backgroundColor: 'white',
+              }}
             />
           </View>
 
@@ -442,10 +499,18 @@ const AddProduct = ({route}: any) => {
               }}>
               Impurities consisting of grains (max.%)
             </Text>
-            <Select
-              data={['kg', 'quintal', 'metric ton']}
-              defaultValue={availableUnit}
-              setSelectValue={setAvailableUnit}
+            <TextInput
+              inputMode="numeric"
+              style={{
+                fontSize: 17,
+                fontFamily: 'serif',
+                borderWidth: 1,
+                padding: 10,
+                borderRadius: 5,
+                width: '95%',
+                marginVertical: 10,
+                backgroundColor: 'white',
+              }}
             />
           </View>
 
@@ -459,10 +524,18 @@ const AddProduct = ({route}: any) => {
               }}>
               Spouted grains(max.%)
             </Text>
-            <Select
-              data={['kg', 'quintal', 'metric ton']}
-              defaultValue={availableUnit}
-              setSelectValue={setAvailableUnit}
+            <TextInput
+              inputMode="numeric"
+              style={{
+                fontSize: 17,
+                fontFamily: 'serif',
+                borderWidth: 1,
+                padding: 10,
+                borderRadius: 5,
+                width: '95%',
+                marginVertical: 10,
+                backgroundColor: 'white',
+              }}
             />
           </View>
 
@@ -476,10 +549,18 @@ const AddProduct = ({route}: any) => {
               }}>
               Miscellanous impurities (max.%)
             </Text>
-            <Select
-              data={['kg', 'quintal', 'metric ton']}
-              defaultValue={availableUnit}
-              setSelectValue={setAvailableUnit}
+            <TextInput
+              inputMode="numeric"
+              style={{
+                fontSize: 17,
+                fontFamily: 'serif',
+                borderWidth: 1,
+                padding: 10,
+                borderRadius: 5,
+                width: '95%',
+                marginVertical: 10,
+                backgroundColor: 'white',
+              }}
             />
           </View>
 
@@ -493,10 +574,18 @@ const AddProduct = ({route}: any) => {
               }}>
               Germination capacity(min.%)
             </Text>
-            <Select
-              data={['kg', 'quintal', 'metric ton']}
-              defaultValue={availableUnit}
-              setSelectValue={setAvailableUnit}
+            <TextInput
+              inputMode="numeric"
+              style={{
+                fontSize: 17,
+                fontFamily: 'serif',
+                borderWidth: 1,
+                padding: 10,
+                borderRadius: 5,
+                width: '95%',
+                marginVertical: 10,
+                backgroundColor: 'white',
+              }}
             />
           </View>
 
@@ -510,10 +599,18 @@ const AddProduct = ({route}: any) => {
               }}>
               Minimum specific weight(kg/hl)
             </Text>
-            <Select
-              data={['kg', 'quintal', 'metric ton']}
-              defaultValue={availableUnit}
-              setSelectValue={setAvailableUnit}
+            <TextInput
+              inputMode="numeric"
+              style={{
+                fontSize: 17,
+                fontFamily: 'serif',
+                borderWidth: 1,
+                padding: 10,
+                borderRadius: 5,
+                width: '95%',
+                marginVertical: 10,
+                backgroundColor: 'white',
+              }}
             />
           </View>
         </View>
@@ -1079,7 +1176,7 @@ const AddProduct = ({route}: any) => {
           style={{
             borderBottomWidth: 1.5,
             borderBottomColor: 'grey',
-            marginTop: 15
+            marginTop: 15,
           }}></View>
         <View>
           <Text
@@ -1093,7 +1190,7 @@ const AddProduct = ({route}: any) => {
             }}>
             PROOF OF QUALITY CERTIFICATION
           </Text>
-          <View style={{padding: 10, backgroundColor:"lightblue"}}>
+          <View style={{padding: 10, backgroundColor: 'lightblue'}}>
             <View style={{paddingVertical: 5}}>
               <Text
                 style={{
@@ -1119,16 +1216,519 @@ const AddProduct = ({route}: any) => {
                   color: '#003',
                   fontWeight: '600',
                 }}>
-               Certification Document
+                Certification Document
               </Text>
-              
-
-             
+              <DocumentPicker />
             </View>
-
-
           </View>
         </View>
+
+        {/* QUALITY */}
+        <View
+          style={{
+            borderBottomWidth: 1.5,
+            borderBottomColor: 'grey',
+          }}></View>
+        <View>
+          <Text
+            style={{
+              fontFamily: 'serif',
+              fontSize: 23,
+              color: '#223',
+              textTransform: 'uppercase',
+              paddingTop: 15,
+              padding: 10,
+            }}>
+            QUALITY
+          </Text>
+
+          <View style={{paddingVertical: 5, paddingHorizontal: 10}}>
+            <Text
+              style={{
+                fontFamily: 'serif',
+                fontSize: 19,
+                color: '#003',
+                fontWeight: '600',
+              }}>
+              Would you like to have service quotation?(Optional)
+            </Text>
+            <View>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  paddingVertical: 10,
+                }}>
+                <View
+                  style={{
+                    borderWidth: 1,
+                    height: 20,
+                    width: 20,
+                    borderRadius: 50,
+                    backgroundColor: 'white',
+                  }}></View>
+                <Text
+                  style={{
+                    fontSize: 18,
+                    fontFamily: 'serif',
+                    color: '#000',
+                    marginLeft: 20,
+                  }}>
+                  Yes
+                </Text>
+              </View>
+
+              <View
+                style={{
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                  paddingVertical: 10,
+                }}>
+                <View
+                  style={{
+                    borderWidth: 1,
+                    height: 20,
+                    width: 20,
+                    borderRadius: 50,
+                    backgroundColor: 'white',
+                  }}></View>
+                <Text
+                  style={{
+                    fontSize: 18,
+                    fontFamily: 'serif',
+                    color: '#000',
+                    marginLeft: 20,
+                  }}>
+                  No
+                </Text>
+              </View>
+            </View>
+
+            <View>
+              <Text
+                style={{
+                  fontSize: 20,
+                  fontFamily: 'serif',
+                  color: 'black',
+                  marginVertical: 10,
+                }}>
+                {' '}
+                Quality control and Certification :
+              </Text>
+
+              <View
+                style={{
+                  borderWidth: 1,
+                  height: 100,
+                  width: '95%',
+                  borderRadius: 5,
+                  marginVertical: 10,
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                }}>
+                <View
+                  style={{
+                    borderWidth: 1,
+                    height: 20,
+                    width: 20,
+                    borderColor: '#333',
+                    marginHorizontal: 20,
+                  }}></View>
+
+                <Text
+                  style={{
+                    fontSize: 16,
+                    fontFamily: 'serif',
+                    color: 'black',
+                    width: '80%',
+                  }}>
+                  Fit for Animal consumption
+                </Text>
+              </View>
+
+              <View
+                style={{
+                  borderWidth: 1,
+                  height: 100,
+                  width: '95%',
+                  borderRadius: 5,
+                  marginVertical: 10,
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                }}>
+                <View
+                  style={{
+                    borderWidth: 1,
+                    height: 20,
+                    width: 20,
+                    borderColor: '#333',
+                    marginHorizontal: 20,
+                  }}></View>
+
+                <Text
+                  style={{
+                    fontSize: 16,
+                    fontFamily: 'serif',
+                    color: 'black',
+                    width: '80%',
+                  }}>
+                  Fit for Human consumption
+                </Text>
+              </View>
+
+              <View
+                style={{
+                  borderWidth: 1,
+                  height: 100,
+                  width: '95%',
+                  borderRadius: 5,
+                  marginVertical: 10,
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                }}>
+                <View
+                  style={{
+                    borderWidth: 1,
+                    height: 20,
+                    width: 20,
+                    borderColor: '#333',
+                    marginHorizontal: 20,
+                  }}></View>
+
+                <Text
+                  style={{
+                    fontSize: 16,
+                    fontFamily: 'serif',
+                    color: 'black',
+                    width: '80%',
+                  }}>
+                  Free from undesirable substances
+                </Text>
+              </View>
+
+              <View
+                style={{
+                  borderWidth: 1,
+                  height: 100,
+                  width: '95%',
+                  borderRadius: 5,
+                  marginVertical: 10,
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                }}>
+                <View
+                  style={{
+                    borderWidth: 1,
+                    height: 20,
+                    width: 20,
+                    borderColor: '#333',
+                    marginHorizontal: 20,
+                  }}></View>
+
+                <Text
+                  style={{
+                    fontSize: 16,
+                    fontFamily: 'serif',
+                    color: 'black',
+                    width: '80%',
+                  }}>
+                  Non-GMO certification
+                </Text>
+              </View>
+            </View>
+
+            <View>
+              <Text
+                style={{
+                  fontSize: 20,
+                  fontFamily: 'serif',
+                  color: 'black',
+                  marginVertical: 10,
+                }}>
+                {' '}
+                Farmer"s Warehouse :
+              </Text>
+
+              <View
+                style={{
+                  borderWidth: 1,
+                  height: 100,
+                  width: '95%',
+                  borderRadius: 5,
+                  marginVertical: 10,
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                }}>
+                <View
+                  style={{
+                    borderWidth: 1,
+                    height: 20,
+                    width: 20,
+                    borderColor: '#333',
+                    marginHorizontal: 20,
+                  }}></View>
+
+                <Text
+                  style={{
+                    fontSize: 16,
+                    fontFamily: 'serif',
+                    color: 'black',
+                    width: '80%',
+                  }}>
+                  Cleanliness inspections
+                </Text>
+              </View>
+
+              <View
+                style={{
+                  borderWidth: 1,
+                  height: 100,
+                  width: '95%',
+                  borderRadius: 5,
+                  marginVertical: 10,
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                }}>
+                <View
+                  style={{
+                    borderWidth: 1,
+                    height: 20,
+                    width: 20,
+                    borderColor: '#333',
+                    marginHorizontal: 20,
+                  }}></View>
+
+                <Text
+                  style={{
+                    fontSize: 16,
+                    fontFamily: 'serif',
+                    color: 'black',
+                    width: '80%',
+                  }}>
+                  Sampling and Quality assessment
+                </Text>
+              </View>
+
+              <View
+                style={{
+                  borderWidth: 1,
+                  height: 100,
+                  width: '95%',
+                  borderRadius: 5,
+                  marginVertical: 10,
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                }}>
+                <View
+                  style={{
+                    borderWidth: 1,
+                    height: 20,
+                    width: 20,
+                    borderColor: '#333',
+                    marginHorizontal: 20,
+                  }}></View>
+
+                <Text
+                  style={{
+                    fontSize: 16,
+                    fontFamily: 'serif',
+                    color: 'black',
+                    width: '80%',
+                  }}>
+                  Metering services
+                </Text>
+              </View>
+
+              <View
+                style={{
+                  borderWidth: 1,
+                  height: 100,
+                  width: '95%',
+                  borderRadius: 5,
+                  marginVertical: 10,
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                }}>
+                <View
+                  style={{
+                    borderWidth: 1,
+                    height: 20,
+                    width: 20,
+                    borderColor: '#333',
+                    marginHorizontal: 20,
+                  }}></View>
+
+                <Text
+                  style={{
+                    fontSize: 16,
+                    fontFamily: 'serif',
+                    color: 'black',
+                    width: '80%',
+                  }}>
+                  Loading and discharge supervision
+                </Text>
+              </View>
+            </View>
+
+            <View>
+              <Text
+                style={{
+                  fontSize: 20,
+                  fontFamily: 'serif',
+                  color: 'black',
+                  marginVertical: 10,
+                }}>
+                {' '}
+                Logistics and Buyers delivery :
+              </Text>
+
+              <View
+                style={{
+                  borderWidth: 1,
+                  height: 100,
+                  width: '95%',
+                  borderRadius: 5,
+                  marginVertical: 10,
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                }}>
+                <View
+                  style={{
+                    borderWidth: 1,
+                    height: 20,
+                    width: 20,
+                    borderColor: '#333',
+                    marginHorizontal: 20,
+                  }}></View>
+
+                <Text
+                  style={{
+                    fontSize: 16,
+                    fontFamily: 'serif',
+                    color: 'black',
+                    width: '80%',
+                  }}>
+                  Loading and discharge servision
+                </Text>
+              </View>
+
+              <View
+                style={{
+                  borderWidth: 1,
+                  height: 100,
+                  width: '95%',
+                  borderRadius: 5,
+                  marginVertical: 10,
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                }}>
+                <View
+                  style={{
+                    borderWidth: 1,
+                    height: 20,
+                    width: 20,
+                    borderColor: '#333',
+                    marginHorizontal: 20,
+                  }}></View>
+
+                <Text
+                  style={{
+                    fontSize: 16,
+                    fontFamily: 'serif',
+                    color: 'black',
+                    width: '80%',
+                  }}>
+                  Quality control
+                </Text>
+              </View>
+
+              <View
+                style={{
+                  borderWidth: 1,
+                  height: 100,
+                  width: '95%',
+                  borderRadius: 5,
+                  marginVertical: 10,
+                  flexDirection: 'row',
+                  alignItems: 'center',
+                }}>
+                <View
+                  style={{
+                    borderWidth: 1,
+                    height: 20,
+                    width: 20,
+                    borderColor: '#333',
+                    marginHorizontal: 20,
+                  }}></View>
+
+                <Text
+                  style={{
+                    fontSize: 16,
+                    fontFamily: 'serif',
+                    color: 'black',
+                    width: '80%',
+                  }}>
+                  Damage Servey
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+
+        {/* Additional Comments */}
+        <View
+          style={{
+            borderBottomWidth: 1.5,
+            borderBottomColor: 'grey',
+          }}></View>
+        <View style={{padding: 10, backgroundColor: 'lightblue'}}>
+          <Text
+            style={{
+              fontFamily: 'serif',
+              fontSize: 20,
+              color: '#223',
+              textTransform: 'uppercase',
+              paddingBottom: 15,
+            }}>
+            Additional Comments
+          </Text>
+          <TextInput
+            multiline={true}
+            numberOfLines={10}
+            style={{
+              height: 120,
+              borderWidth: 1,
+              fontSize: 17,
+              fontFamily: 'serif',
+              color: '#333',
+              borderRadius: 5,
+              textAlignVertical: 'top',
+              width: '95%',
+              backgroundColor: '#fff',
+            }}
+          />
+        </View>
+
+        {/* Add Product */}
+        <TouchableOpacity
+          style={{
+            backgroundColor: '#5da7ca',
+            padding: 10,
+            alignSelf: 'center',
+            marginVertical: 15,
+            borderRadius: 7,
+            width: '70%',
+          }}>
+          <Text
+            style={{
+              textAlign: 'center',
+              color: '#fff',
+              fontSize: 20,
+              fontFamily: 'serif',
+            }}>
+            Add Product
+          </Text>
+        </TouchableOpacity>
       </View>
     </ScrollView>
   );
