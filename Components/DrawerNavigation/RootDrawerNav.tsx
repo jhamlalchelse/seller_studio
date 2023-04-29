@@ -5,6 +5,7 @@ import MainScreen from '../StackNavigation/MainScreen'
 import ProductStack from '../Product/ProductStack'
 import OrderStack from '../Order/OrderStack'
 import Profile from '../Profile/Profile'
+import CropwayGuide from '../Guide/CropwayGuide'
 
 const Drawer = createDrawerNavigator()
 const RootDrawerNav = () => {
@@ -23,6 +24,7 @@ const RootDrawerNav = () => {
       <Drawer.Screen name='Product' component={ProductStack} />
       <Drawer.Screen name='Order' component={OrderStack} />
       <Drawer.Screen name='Profile' component={Profile} />
+      <Drawer.Screen name='Cropway Guide' component={CropwayGuide} />
     </Drawer.Navigator>
   )
 }
