@@ -11,6 +11,7 @@ import {
   Button,
   TouchableHighlight,
 } from 'react-native';
+import styles from '../Styles/Home';
 
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
@@ -105,8 +106,8 @@ const Home = ({navigation}: any) => {
       <ScrollView>
         {/* Carousel */}
         {/* Our Solution */}
-        <View>
-          <Text style={[styles.textHeading, {fontSize: 30}]}>Our Solution</Text>
+        <View style={{backgroundColor: 'white'}}>
+          <Text style={[styles.heading, {fontSize: 30}]}>Our Solution</Text>
           <View style={{backgroundColor: '#000', opacity: 0.9}}>
             <ImageBackground
               source={require('../../../../src/assets/images/OurSolution-img1.jpg')}
@@ -114,36 +115,28 @@ const Home = ({navigation}: any) => {
               imageStyle={{opacity: 0.5, backgroundColor: 'black'}}
               style={{width: '100%', height: 350}}>
               <View style={{paddingVertical: 30}}>
-                <Text
-                  style={{
-                    textAlign: 'center',
-                    fontSize: 25,
-                    color: '#fff',
-                    fontWeight: '500',
-                    fontFamily: 'time',
-                  }}>
-                  Farm-To-Fork
-                </Text>
+                <Text style={styles.subHeading}>Farm-To-Fork</Text>
                 <TouchableOpacity
                   onPress={() => navigation.navigate('Register')}
-                  style={{
-                    backgroundColor: '#5da7ca',
-                    paddingVertical: 9,
-                    alignSelf: 'center',
-                    margin: 30,
-                    borderRadius: 20,
-                    paddingHorizontal: 60,
-                  }}>
+                  style={styles.registerBtn}>
                   <Text
                     style={{textAlign: 'center', color: '#fff', fontSize: 16}}>
                     Register Now
                   </Text>
                 </TouchableOpacity>
                 <View style={{padding: 14}}>
-                  <Text style={[styles.ourSolTextPara,{lineHeight: 23}]}>
+                  <Text
+                    style={[
+                      styles.paraText,
+                      {lineHeight: 23, paddingHorizontal: 15},
+                    ]}>
                     We do not buy or sell crops, and we do not act as brokers.
                   </Text>
-                  <Text style={[styles.ourSolTextPara,{lineHeight: 23}]}>
+                  <Text
+                    style={[
+                      styles.paraText,
+                      {lineHeight: 23, paddingHorizontal: 15},
+                    ]}>
                     Rather, we provide you with the option of easily marketing
                     deliver the fastest harvest-to-retail in the industry via
                     our online platform.
@@ -168,51 +161,20 @@ const Home = ({navigation}: any) => {
             />
           </View>
         </View>
+
         {/* Latest Product */}
         <View>
-          <Text style={styles.textHeading}>Latest Product-(To Buy)</Text>
+          <Text style={styles.heading}>Latest Product-(To Buy)</Text>
           {toBuy?.map((item, index) => {
             return (
-              <View
-                key={index}
-                style={{
-                  borderWidth: 1,
-                  marginVertical: 10,
-                  marginHorizontal: 50,
-                  flexDirection: 'row',
-                  alignItems: 'center',
-                  padding: 15,
-                  borderRadius: 10,
-                }}>
+              <View key={index} style={styles.latestProductBorder}>
                 <Image source={item.uri} style={{width: 110, height: 110}} />
                 <View style={{marginLeft: 30}}>
-                  <Text
-                    style={{
-                      fontSize: 18,
-                      fontFamily: 'serif',
-                      paddingRight: 30,
-                      color: '#220',
-                    }}>
-                    {item.name}
-                  </Text>
-                  <Text
-                    style={{
-                      fontSize: 18,
-                      fontFamily: 'serif',
-                      paddingRight: 30,
-                      color: '#220',
-                    }}>
+                  <Text style={styles.textBlack}>{item.name}</Text>
+                  <Text style={[styles.textBlack, {paddingVertical: 5}]}>
                     {item.weight}
                   </Text>
-                  <Text
-                    style={{
-                      fontSize: 18,
-                      fontFamily: 'serif',
-                      paddingRight: 30,
-                      color: '#220',
-                    }}>
-                    Rs. {item.price}
-                  </Text>
+                  <Text style={styles.textBlack}>Rs. {item.price}</Text>
                 </View>
               </View>
             );
@@ -221,61 +183,18 @@ const Home = ({navigation}: any) => {
 
         {/* Latest Product-(Buyer's Requirements) */}
         <View style={{marginVertical: 20}}>
-          <Text style={styles.textHeading}>
+          <Text style={styles.heading}>
             Latest Product-(Buyer's Requirements)
           </Text>
           {buyerReq?.map((item, index) => {
             return (
-              <View
-                key={index}
-                style={{
-                  borderWidth: 1,
-                  marginVertical: 10,
-                  marginHorizontal: 50,
-                  flexDirection: 'row',
-                  alignItems: 'center',
-                  padding: 15,
-                  borderRadius: 10,
-                }}>
+              <View key={index} style={styles.latestProductBorder}>
                 <Image source={item.uri} style={{width: 110, height: 110}} />
                 <View style={{marginLeft: 30}}>
-                  <Text
-                    style={{
-                      fontSize: 18,
-                      fontFamily: 'serif',
-                      paddingRight: 30,
-                      color: '#220',
-                    }}>
-                    {item.name}
-                  </Text>
-                  <Text
-                    style={{
-                      fontSize: 18,
-                      fontFamily: 'serif',
-                      paddingRight: 30,
-                      color: '#220',
-                      width: 175
-                    }}>
-                   {item.category}
-                  </Text>
-                  <Text
-                    style={{
-                      fontSize: 18,
-                      fontFamily: 'serif',
-                      paddingRight: 30,
-                      color: '#220',
-                    }}>
-                    {item.weight}
-                  </Text>
-                  <Text
-                    style={{
-                      fontSize: 18,
-                      fontFamily: 'serif',
-                      paddingRight: 30,
-                      color: '#220',
-                    }}>
-                    Rs. {item.price}
-                  </Text>
+                  <Text style={styles.textBlack}>{item.name}</Text>
+                  <Text style={styles.textBlack}>{item.category}</Text>
+                  <Text style={styles.textBlack}>{item.weight}</Text>
+                  <Text style={styles.textBlack}>Rs. {item.price}</Text>
                 </View>
               </View>
             );
@@ -528,31 +447,14 @@ const Home = ({navigation}: any) => {
 
         {/* Businesses /Ecosystem /Stakeholders */}
         <View style={{marginVertical: 20}}>
-          <Text style={styles.textHeading}>
+          <Text style={styles.heading}>
             Businesses /Ecosystem /Stakeholders
           </Text>
-          <Text
-            style={{
-              fontSize: 17,
-              fontFamily: 'san-serif',
-              fontWeight: '600',
-              color: '#333',
-              textAlign: 'center',
-              paddingHorizontal: 12,
-            }}>
+          <Text style={styles.businessDesc}>
             We are dedicated to meeting all of your requirements in a single
             platform.
           </Text>
-          <Text
-            style={{
-              fontSize: 17,
-              fontFamily: 'san-serif',
-              fontWeight: '600',
-              color: '#333',
-              textAlign: 'center',
-              paddingHorizontal: 12,
-              marginBottom: 30,
-            }}>
+          <Text style={[styles.businessDesc, {marginBottom: 20}]}>
             This is your opportunity to present your efforts to the global
             market at any time and from any location!
           </Text>
@@ -561,36 +463,15 @@ const Home = ({navigation}: any) => {
             {/* Buyer */}
             <View>
               <TouchableOpacity onPress={() => navigation.navigate('Buyer')}>
-                <View
-                  style={{
-                    backgroundColor: '#88bc8f',
-                    alignSelf: 'center',
-                    borderRadius: 5,
-                    padding: 10,
-                  }}>
+                <View style={styles.buyerBG}>
                   <Image
                     source={require('../../../../src/assets/images/buyer_businesses_img.png')}
                     resizeMode="contain"
                     style={{width: 200, height: 170}}
                   />
                 </View>
-                <Text
-                  style={{
-                    textAlign: 'center',
-                    fontSize: 23,
-                    color: '#333',
-                    fontWeight: '700',
-                    fontFamily: 'georgia',
-                    marginVertical: 10,
-                  }}>
-                  Buyer
-                </Text>
-                <Text
-                  style={{
-                    marginHorizontal: 15,
-                    textAlign: 'center',
-                    color: '#333',
-                  }}>
+                <Text style={styles.buyerHeading}>Buyer</Text>
+                <Text style={styles.buyerDesc}>
                   Buy without the hassle and from a credible system for all of
                   your needs - it will be delivered straight to your door.
                 </Text>
@@ -598,79 +479,37 @@ const Home = ({navigation}: any) => {
             </View>
             {/* Seller */}
             <View style={{marginVertical: 30}}>
-            <TouchableOpacity onPress={() => navigation.navigate('Seller')}>
-              <View
-                style={{
-                  backgroundColor: '#88bc8f',
-                  alignSelf: 'center',
-                  borderRadius: 5,
-                  padding: 10,
-                }}>
-                <Image
-                  source={require('../../../../src/assets/images/seller_businesses_img.png')}
-                  resizeMode="contain"
-                  style={{width: 200, height: 170}}
-                />
-              </View>
-              <Text
-                style={{
-                  textAlign: 'center',
-                  fontSize: 23,
-                  color: '#333',
-                  fontWeight: '700',
-                  fontFamily: 'georgia',
-                  marginVertical: 10,
-                }}>
-                Seller
-              </Text>
-              <Text
-                style={{
-                  marginHorizontal: 15,
-                  textAlign: 'center',
-                  color: '#333',
-                }}>
-                Get the best prices from a diverse range of buyers and present
-                your efforts to the global and local markets.
-              </Text>
+              <TouchableOpacity onPress={() => navigation.navigate('Seller')}>
+                <View style={styles.buyerBG}>
+                  <Image
+                    source={require('../../../../src/assets/images/seller_businesses_img.png')}
+                    resizeMode="contain"
+                    style={{width: 200, height: 170}}
+                  />
+                </View>
+                <Text style={styles.buyerHeading}>Seller</Text>
+                <Text style={styles.buyerDesc}>
+                  Get the best prices from a diverse range of buyers and present
+                  your efforts to the global and local markets.
+                </Text>
               </TouchableOpacity>
             </View>
             {/* Value-added Services */}
             <View>
-            <TouchableOpacity onPress={() => navigation.navigate('ValueAddedService')}>
-
-              <View
-                style={{
-                  backgroundColor: '#88bc8f',
-                  alignSelf: 'center',
-                  borderRadius: 5,
-                  padding: 10,
-                }}>
-                <Image
-                  source={require('../../../../src/assets/images/value-added-services_businesses_img.png')}
-                  resizeMode="contain"
-                  style={{width: 200, height: 170}}
-                />
-              </View>
-              <Text
-                style={{
-                  textAlign: 'center',
-                  fontSize: 23,
-                  color: '#333',
-                  fontWeight: '700',
-                  fontFamily: 'georgia',
-                  marginVertical: 10,
-                }}>
-                Value-added Services
-              </Text>
-              <Text
-                style={{
-                  marginHorizontal: 15,
-                  textAlign: 'center',
-                  color: '#333',
-                }}>
-                All of the following services are offered by Cropway through
-                internal operations and our network of specialised partners.
-              </Text>
+              <TouchableOpacity
+                onPress={() => navigation.navigate('ValueAddedService')}>
+                <View style={styles.buyerBG}>
+                  <Image
+                    source={require('../../../../src/assets/images/value-added-services_businesses_img.png')}
+                    resizeMode="contain"
+                    style={{width: 200, height: 170}}
+                  />
+                </View>
+                <Text style={styles.buyerHeading}>Value-added Services</Text>
+                <Text style={styles.buyerDesc}>
+                  All of the following services are offered by Cropway through
+                  internal operations and our network of specialised partners.
+                </Text>
               </TouchableOpacity>
             </View>
           </View>
@@ -678,7 +517,7 @@ const Home = ({navigation}: any) => {
 
         {/* How To Order */}
         <View style={{paddingVertical: 30, backgroundColor: 'white'}}>
-          <Text style={[styles.textHeading, {marginVertical: 5}]}>
+          <Text style={[styles.heading, {marginVertical: 5}]}>
             How to Orders
           </Text>
           <ScrollView
@@ -693,22 +532,14 @@ const Home = ({navigation}: any) => {
 
         {/* Why choose us? */}
         <View style={{backgroundColor: 'rgba(217, 217, 217, 0.2)'}}>
-          <Text style={styles.textHeading}>Why Choose Us?</Text>
+          <Text style={styles.heading}>Why Choose Us?</Text>
           <View>
             <Image
               source={require('../../../../src/assets/images/why-choose-us_img1.jpg')}
               resizeMode="stretch"
               style={{height: 230, width: '90%', alignSelf: 'center'}}
             />
-            <Text
-              style={{
-                marginHorizontal: '6%',
-                marginTop: 10,
-                fontSize: 14,
-                fontFamily: 'serif',
-                color: '#000',
-                lineHeight: 21,
-              }}>
+            <Text style={styles.whyChooseDesc}>
               Farm-to-fork fresh produce delivery is made possible through
               Cropway's Seller Studio, a platform for collaboration between
               stakeholders in the Agri value chain that incorporates technology
@@ -722,15 +553,7 @@ const Home = ({navigation}: any) => {
               resizeMode="stretch"
               style={{height: 230, width: '90%', alignSelf: 'center'}}
             />
-            <Text
-              style={{
-                marginHorizontal: '6%',
-                marginTop: 10,
-                fontSize: 14,
-                fontFamily: 'serif',
-                color: 'black',
-                lineHeight: 21,
-              }}>
+            <Text style={styles.whyChooseDesc}>
               It is a high-quality, cost-effective, and adaptable agricultural
               supply chain solution. On top of routine estimates, we've layered
               AI/ML-based precision demand planning, as well as integrated and
@@ -748,23 +571,13 @@ const Home = ({navigation}: any) => {
 
         {/* Our Technology */}
         <View style={{backgroundColor: '#e0ffff', marginTop: 30}}>
-          <Text style={[styles.textHeading]}>Our Technology</Text>
+          <Text style={[styles.heading]}>Our Technology</Text>
 
           <View style={{position: 'relative', marginVertical: 20}}>
             <View>
               {ourTech?.map((item, index) => {
                 return (
-                  <View
-                    style={{
-                      flexDirection: 'row',
-                      alignItems: 'center',
-                      backgroundColor: 'lightblue',
-                      marginBottom: 15,
-                      borderRadius: 5,
-                      paddingHorizontal: 25,
-                      alignSelf: 'center',
-                    }}
-                    key={index}>
+                  <View style={styles.techBg} key={index}>
                     <View>
                       <Image
                         source={item.uri}
@@ -773,16 +586,7 @@ const Home = ({navigation}: any) => {
                       />
                     </View>
                     <View>
-                      <Text
-                        style={{
-                          fontSize: 17,
-                          color: '#333',
-                          paddingLeft: 20,
-                          width: 160,
-                          textAlign: 'center',
-                        }}>
-                        {item.name}
-                      </Text>
+                      <Text style={styles.techText}>{item.name}</Text>
                     </View>
                   </View>
                 );
@@ -803,7 +607,7 @@ const Home = ({navigation}: any) => {
 
         {/* Get In Touch */}
         <View style={{backgroundColor: '#e0ffff', position: 'relative'}}>
-          <Text style={[styles.textHeading, {marginTop: 35, marginBottom: 5}]}>
+          <Text style={[styles.heading, {marginTop: 35, marginBottom: 5}]}>
             Get In Touch
           </Text>
           <Text
@@ -824,107 +628,24 @@ const Home = ({navigation}: any) => {
               marginHorizontal: 15,
             }}>
             <View style={{marginVertical: 10}}>
-              <Text
-                style={{
-                  paddingLeft: 25,
-                  marginBottom: 10,
-                  fontSize: 17,
-                  fontFamily: 'serif',
-                  color: '#333',
-                }}>
-                Name
-              </Text>
-              <TextInput
-                placeholder="Name"
-                style={{
-                  borderWidth: 0.8,
-                  padding: 7,
-                  paddingHorizontal: 20,
-                  fontSize: 17,
-                  fontFamily: 'serif',
-                  marginHorizontal: 20,
-                  borderRadius: 10,
-                  color: '#333',
-                }}
-              />
+              <Text style={styles.inputLabel}>Name</Text>
+              <TextInput placeholder="Name" style={styles.inputText} />
             </View>
             <View style={{marginVertical: 10}}>
-              <Text
-                style={{
-                  paddingLeft: 25,
-                  marginBottom: 10,
-                  fontSize: 17,
-                  fontFamily: 'serif',
-                  color: '#333',
-                }}>
-                Email Address *
-              </Text>
-              <TextInput
-                placeholder="Enter Email"
-                style={{
-                  borderWidth: 0.8,
-                  padding: 7,
-                  paddingHorizontal: 20,
-                  fontSize: 17,
-                  fontFamily: 'serif',
-                  color: '#333',
-                  marginHorizontal: 20,
-                  borderRadius: 10,
-                }}
-              />
+              <Text style={styles.inputLabel}>Email Address *</Text>
+              <TextInput placeholder="Enter Email" style={styles.inputText} />
             </View>
             <View style={{marginVertical: 10}}>
-              <Text
-                style={{
-                  paddingLeft: 25,
-                  marginBottom: 10,
-                  fontSize: 17,
-                  fontFamily: 'serif',
-                  color: '#333',
-                }}>
-                Contact Number *
-              </Text>
-              <TextInput
-                placeholder="Enter Number"
-                style={{
-                  borderWidth: 0.8,
-                  padding: 7,
-                  paddingHorizontal: 20,
-                  fontSize: 17,
-                  fontFamily: 'serif',
-                  color: '#333',
-                  marginHorizontal: 20,
-                  borderRadius: 10,
-                }}
-              />
+              <Text style={styles.inputLabel}>Contact Number *</Text>
+              <TextInput placeholder="Enter Number" style={styles.inputText} />
             </View>
 
             <View style={{marginVertical: 10}}>
-              <Text
-                style={{
-                  paddingLeft: 25,
-                  marginBottom: 10,
-                  fontSize: 17,
-                  fontFamily: 'serif',
-                  color: '#333',
-                }}>
-                Your Message *
-              </Text>
+              <Text style={styles.inputLabel}>Your Message *</Text>
               <TextInput
                 multiline={true}
                 numberOfLines={10}
-                style={{
-                  height: 100,
-                  borderWidth: 0.8,
-                  padding: 7,
-                  paddingHorizontal: 20,
-                  fontSize: 17,
-                  fontFamily: 'serif',
-                  color: '#333',
-                  marginHorizontal: 20,
-                  borderRadius: 10,
-                  textAlignVertical: 'top',
-                }}
+                style={styles.inputTextArea}
               />
             </View>
             <TouchableOpacity
@@ -933,20 +654,7 @@ const Home = ({navigation}: any) => {
                 justifyContent: 'flex-start',
                 marginLeft: 20,
               }}>
-              <Text
-                style={{
-                  padding: 10,
-                  paddingHorizontal: 30,
-                  fontSize: 18,
-                  fontFamily: 'serif',
-                  color: '#fff',
-                  backgroundColor: '#4682b4',
-                  alignSelf: 'center',
-                  borderRadius: 5,
-                  marginVertical: 20,
-                }}>
-                Send Message
-              </Text>
+              <Text style={styles.sendMsgBtn}>Send Message</Text>
             </TouchableOpacity>
           </View>
 
@@ -1007,118 +715,27 @@ const Home = ({navigation}: any) => {
             })}
           </View>
 
-          <View
-            style={{
-              alignSelf: 'center',
-              alignItems: 'center',
-              marginBottom: 10,
-            }}>
-            <Text style={{color: 'white', fontSize: 20, fontFamily: 'serif'}}>
-              SUPPORT
-            </Text>
-            <Text
-              style={{
-                color: '#fff',
-                fontSize: 13,
-                marginVertical: 5,
-                textDecorationLine: 'underline',
-                fontFamily: 'serif',
-              }}>
-              Return and Exchange
-            </Text>
+          <View style={styles.footerFlex}>
+            <Text style={styles.footerHeading}>SUPPORT</Text>
+            <Text style={styles.footerLink}>Return and Exchange</Text>
           </View>
 
-          <View
-            style={{
-              alignSelf: 'center',
-              alignItems: 'center',
-              marginVertical: 10,
-            }}>
-            <Text style={{color: '#fff', fontSize: 20, fontFamily: 'serif'}}>
-              COMPANY
-            </Text>
-            <Text
-              style={{
-                color: '#fff',
-                fontSize: 14,
-                marginVertical: 5,
-                textDecorationLine: 'underline',
-                fontFamily: 'serif',
-              }}>
-              About Us
-            </Text>
-            <Text
-              style={{
-                color: '#fff',
-                fontSize: 13,
-                marginVertical: 5,
-                textDecorationLine: 'underline',
-                fontFamily: 'serif',
-              }}>
-              Contact Us
-            </Text>
+          <View style={styles.footerFlex}>
+            <Text style={styles.footerHeading}>COMPANY</Text>
+            <Text style={styles.footerLink}>About Us</Text>
+            <Text style={styles.footerLink}>Contact Us</Text>
           </View>
 
-          <View
-            style={{
-              alignSelf: 'center',
-              alignItems: 'center',
-              marginVertical: 10,
-            }}>
-            <Text style={{color: '#fff', fontSize: 20, fontFamily: 'serif'}}>
-              LEGAL
-            </Text>
-            <Text
-              style={{
-                color: '#fff',
-                fontSize: 13,
-                marginVertical: 5,
-                textDecorationLine: 'underline',
-                fontFamily: 'serif',
-              }}>
-              Privacy Policy
-            </Text>
-            <Text
-              style={{
-                color: '#fff',
-                fontSize: 13,
-                marginVertical: 5,
-                textDecorationLine: 'underline',
-                fontFamily: 'serif',
-              }}>
-              Terms and Conditions
-            </Text>
+          <View style={styles.footerFlex}>
+            <Text style={styles.footerHeading}>LEGAL</Text>
+            <Text style={styles.footerLink}>Privacy Policy</Text>
+            <Text style={styles.footerLink}>Terms and Conditions</Text>
           </View>
 
-          <View
-            style={{
-              alignSelf: 'center',
-              alignItems: 'center',
-              marginVertical: 10,
-            }}>
-            <Text style={{color: '#fff', fontSize: 20, fontFamily: 'serif'}}>
-              SELL WITH US
-            </Text>
-            <Text
-              style={{
-                color: '#fff',
-                fontSize: 13,
-                marginVertical: 5,
-                textDecorationLine: 'underline',
-                fontFamily: 'serif',
-              }}>
-              Sell on Cropway
-            </Text>
-            <Text
-              style={{
-                color: '#fff',
-                fontSize: 13,
-                marginVertical: 5,
-                textDecorationLine: 'underline',
-                fontFamily: 'serif',
-              }}>
-              Avail Services
-            </Text>
+          <View style={styles.footerFlex}>
+            <Text style={styles.footerHeading}>SELL WITH US</Text>
+            <Text style={styles.footerLink}>Sell on Cropway</Text>
+            <Text style={styles.footerLink}>Avail Services</Text>
           </View>
 
           <Text style={{textAlign: 'center', color: '#fff', marginTop: 30}}>
@@ -1129,23 +746,5 @@ const Home = ({navigation}: any) => {
     </>
   );
 };
-
-const styles = StyleSheet.create({
-  textHeading: {
-    textAlign: 'center',
-    fontSize: 25,
-    marginVertical: 15,
-    fontWeight: '700',
-    color: '#333',
-    fontFamily: 'serif',
-  },
-  ourSolTextPara: {
-    fontSize: 16,
-    color: 'white',
-    textAlign: 'center',
-    fontFamily: 'serif',
-    paddingHorizontal: 15,
-  },
-});
 
 export default Home;

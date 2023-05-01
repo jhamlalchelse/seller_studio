@@ -7,6 +7,7 @@ import {
   ImageBackground,
   ScrollView,
 } from 'react-native';
+import styles from '../Styles/VAS';
 
 const ValueAddedService = ({navigation}: any) => {
   return (
@@ -17,36 +18,18 @@ const ValueAddedService = ({navigation}: any) => {
             source={require('./images/VAS_BG.webp')}
             resizeMode="cover"
             imageStyle={{opacity: 0.5, backgroundColor: 'black'}}
-            style={{
-              width: '100%',
-              height: 650,
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}>
+            style={styles.buyerBG}>
             <View>
               <Text
-                style={{
-                  textAlign: 'center',
-                  fontSize: 30,
-                  color: '#fff',
-                  fontWeight: '900',
-                  fontFamily: 'serif',
-                  marginVertical: 10,
+                style={[ styles.buyerHeading, {
                   paddingHorizontal: 75,
-                }}>
+                }]}>
                 VALUE-ADDED-SERVICES
               </Text>
               <Text
-                style={{
-                  textAlign: 'center',
-                  fontSize: 17,
-                  color: '#fff',
-                  fontWeight: '600',
-                  fontFamily: 'serif',
-                  lineHeight: 22,
+                style={[ styles.buyerDesc, {
                   paddingHorizontal: 20,
-                }}>
+                }]}>
                 All of the following services are offered by Cropway through
                 internal operations and our network of specialised partners
               </Text>
@@ -57,68 +40,28 @@ const ValueAddedService = ({navigation}: any) => {
         <View style={{paddingVertical: 30}}>
           {/* img1 */}
           <View
-            style={{
-              backgroundColor: '#fff0f0',
-              borderWidth: 0.6,
-              borderTopEndRadius: 10,
-              borderTopStartRadius: 10,
-              marginHorizontal: 5,
-              paddingTop: '2%',
-              paddingHorizontal: '.4%',
-            }}>
+            style={styles.outerBg}>
             <View style={{alignSelf: 'center'}}>
               <ImageBackground
                 source={require('./images/value-img1.jpg')}
                 resizeMode="stretch"
                 imageStyle={{borderTopRightRadius: 20, borderTopLeftRadius: 20}}
-                style={{
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  width: '99%',
-                }}>
+                style={styles.bgImage}>
                 <View
-                  style={{
-                    backgroundColor: 'black',
-                    opacity: 0.8,
-                    height: 330,
-                    borderTopRightRadius: 20,
-                    borderTopLeftRadius: 20,
-                  }}>
+                  style={styles.bgTextDiv}>
                   <Text
-                    style={{
-                      fontSize: 22,
-                      fontWeight: '700',
-                      color: '#fff',
-                      fontFamily: 'serif',
-                      paddingVertical: 15,
-                      textAlign: 'center',
-                    }}>
+                    style={styles.bgHeading}>
                     Logistics & storage facilities
                   </Text>
                   <Text
-                    style={{
-                      fontSize: 17,
-                      lineHeight: 25,
-                      color: 'white',
-                      fontFamily: 'serif',
-                      paddingVertical: 5,
-                      paddingHorizontal: 15,
-                    }}>
+                    style={styles.bgDesc}>
                     With Cropway's extensive range of services, all value chain
                     participants can effectively store and transport
                     agricultural goods, resulting in a seamless experience
                     thanks to the dig ital platform.
                   </Text>
                   <Text
-                    style={{
-                      fontSize: 17,
-                      lineHeight: 25,
-                      color: 'white',
-                      fontFamily: 'serif',
-                      paddingVertical: 10,
-                      paddingHorizontal: 15,
-                    }}>
+                    style={styles.bgDesc}>
                     These offerings include expert consultation, procurement
                     assistance, audit, and monitoring, as well as storage and
                     delivery in India and abroad.
@@ -130,68 +73,27 @@ const ValueAddedService = ({navigation}: any) => {
 
           {/* img2 */}
           <View
-            style={{
-              backgroundColor: '#fff0f0',
-              borderWidth: 0.6,
-              borderTopEndRadius: 10,
-              borderTopStartRadius: 10,
-              marginHorizontal: 5,
-              paddingTop: '2%',
-              paddingHorizontal: '.4%',
-              marginVertical: 30
-            }}>
+            style={[styles.outerBg,{marginVertical: 20}]}>
             <View style={{alignSelf: 'center'}}>
               <ImageBackground
                 source={require('./images/value-img2.jpg')}
                 resizeMode="stretch"
                 imageStyle={{borderTopRightRadius: 20, borderTopLeftRadius: 20}}
-                style={{
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  width: '99%',
-                }}>
+                style={styles.bgImage}>
                 <View
-                  style={{
-                    backgroundColor: 'black',
-                    opacity: 0.8,
-                    height: 330,
-                    borderTopRightRadius: 20,
-                    borderTopLeftRadius: 20,
-                  }}>
+                  style={styles.bgTextDiv}>
                   <Text
-                    style={{
-                      fontSize: 22,
-                      fontWeight: '700',
-                      color: '#fff',
-                      fontFamily: 'serif',
-                      paddingVertical: 15,
-                      textAlign: 'center',
-                    }}>
+                    style={styles.bgHeading}>
                     Packaging, grading & sorting
                   </Text>
                   <Text
-                    style={{
-                      fontSize: 17,
-                      lineHeight: 25,
-                      color: 'white',
-                      fontFamily: 'serif',
-                      paddingVertical: 5,
-                      paddingHorizontal: 15,
-                    }}>
+                    style={styles.bgDesc}>
                     Cropway connects you to a variety of potential packaging,
                     grading, and sorting opportunities in the agri ecosystem
                     enabled by technology possibilities.
                   </Text>
                   <Text
-                    style={{
-                      fontSize: 17,
-                      lineHeight: 25,
-                      color: 'white',
-                      fontFamily: 'serif',
-                      paddingVertical: 10,
-                      paddingHorizontal: 15,
-                    }}>
+                   style={[styles.bgDesc, {marginTop: 15}]}>
                     We help our clients value-add processes by acting as
                     gatekeepers for the quality and quanitty of the purchased
                     produce
@@ -203,54 +105,21 @@ const ValueAddedService = ({navigation}: any) => {
 
           {/* img3 */}
           <View
-            style={{
-              backgroundColor: '#fff0f0',
-              borderWidth: 0.6,
-              borderTopEndRadius: 10,
-              borderTopStartRadius: 10,
-              marginHorizontal: 5,
-              paddingTop: '2%',
-              paddingHorizontal: '.4%',
-            }}>
+            style={styles.outerBg}>
             <View style={{alignSelf: 'center'}}>
               <ImageBackground
                 source={require('./images/value-img3.jpg')}
                 resizeMode="stretch"
                 imageStyle={{borderTopRightRadius: 20, borderTopLeftRadius: 20}}
-                style={{
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  width: '99%',
-                }}>
+                style={styles.bgImage}>
                 <View
-                  style={{
-                    backgroundColor: 'black',
-                    opacity: 0.8,
-                    height: 330,
-                    borderTopRightRadius: 20,
-                    borderTopLeftRadius: 20,
-                  }}>
+                  style={styles.bgTextDiv}>
                   <Text
-                    style={{
-                      fontSize: 22,
-                      fontWeight: '700',
-                      color: '#fff',
-                      fontFamily: 'serif',
-                      paddingVertical: 15,
-                      textAlign: 'center',
-                    }}>
+                    style={styles.bgHeading}>
                     Processing
                   </Text>
                   <Text
-                    style={{
-                      fontSize: 17,
-                      lineHeight: 25,
-                      color: 'white',
-                      fontFamily: 'serif',
-                      paddingVertical: 5,
-                      paddingHorizontal: 15,
-                    }}>
+                    style={styles.bgDesc}>
                     Agriprocessing businesses make significant contributions to
                     the value chain of several commodities. These businesses
                     must purchase, store, and process large quantities of
@@ -281,13 +150,7 @@ const ValueAddedService = ({navigation}: any) => {
             Other Services
           </Text>
           <Text
-            style={{
-              color: '#333',
-              fontSize: 16,
-              fontFamily: 'serif',
-              paddingVertical: 15,
-              lineHeight: 22,
-            }}>
+            style={styles.otherServiceDesc}>
             Cropway is establishing a rural retail network of village-level
             entrepreneurs for last-mile delivery and aggregation, while
             collaborating with partners who already provide services to farmers
@@ -295,13 +158,7 @@ const ValueAddedService = ({navigation}: any) => {
           </Text>
 
           <Text
-            style={{
-              color: '#333',
-              fontSize: 16,
-              fontFamily: 'serif',
-              paddingVertical: 15,
-              lineHeight: 22,
-            }}>
+             style={[styles.otherServiceDesc,{ paddingVertical: 15}]}>
             Governments, agri expert universities, non-governmental
             organisations (NGOs), charitable organisations, CSR initiatives,
             logistics companies, and for-profit agribusinesses are all covered.
@@ -314,13 +171,7 @@ const ValueAddedService = ({navigation}: any) => {
           </Text>
 
           <Text
-            style={{
-              color: '#333',
-              fontSize: 16,
-              fontFamily: 'serif',
-              paddingVertical: 15,
-              lineHeight: 22,
-            }}>
+            style={styles.otherServiceDesc}>
             If you provide any of these solutions, you can market your services
             to potential buyers and sellers, as well as vice versa, so that
             clients can benefit from a convenient one-stop shopping experience
