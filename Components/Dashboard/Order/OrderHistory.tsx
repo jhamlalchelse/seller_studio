@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {View, Text, Image, TouchableHighlight, Alert} from 'react-native';
-import HeaderHeading from '../../HeaderHeading';
-import BorderBottom from '../../BorderBottom';
+import HeaderHeading from '../Dummy/HeaderHeading';
+import BorderBottom from '../Dummy/BorderBottom';
 import DatePicker from './DatePicker';
 
 const OrderHistory = () => {

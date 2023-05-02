@@ -1,29 +1,23 @@
 import React from 'react';
 import {View, Text, TouchableHighlight} from 'react-native';
-import HeaderHeading from '../HeaderHeading';
-import BorderBottom from '../BorderBottom';
+import HeaderHeading from '../Dummy/HeaderHeading';
+import BorderBottom from '../Dummy/BorderBottom';
 
-const BankDetails = () => {
+const CropwayGuide = () => {
   return (
-    <View style={{marginTop: 10}}>
-      <HeaderHeading heading={'Bank details'} />
+    <View style={{paddingVertical: 5}}>
+      <HeaderHeading heading={'Cropway Guide'} />
       <BorderBottom />
       <View style={{padding: 10}}>
-        <TouchableHighlight
-          activeOpacity={0.6}
-          underlayColor="#DDDDDD"
-          style={{alignSelf: 'flex-end'}}
-          onPress={() => console.warn('Edit!')}>
-          <Text
-            style={{
-              width: '35%',
-              fontSize: 18,
-              fontFamily: 'serif',
-              color: '#333',
-            }}>
-            Edit
-          </Text>
-        </TouchableHighlight>
+        <Text
+          style={{
+            fontSize: 22,
+            fontFamily: 'serif',
+            color: '#333',
+            fontWeight: '700',
+          }}>
+          Status
+        </Text>
         <View
           style={{
             flexDirection: 'row',
@@ -35,9 +29,9 @@ const BankDetails = () => {
               width: '35%',
               fontSize: 18,
               fontFamily: 'serif',
-              color: '#333',
+              color: 'green',
             }}>
-            Bank Name
+            Active
           </Text>
           <Text
             style={{
@@ -53,9 +47,77 @@ const BankDetails = () => {
               width: '60%',
               fontSize: 18,
               fontFamily: 'serif',
-              color: '#333',
+              color: '#000',
             }}>
-            FARMER
+            Buyer sends quatation to seller.
+          </Text>
+        </View>
+        <View
+          style={{
+            flexDirection: 'row',
+            alignItems: 'center',
+            paddingVertical: 10,
+          }}>
+          <Text
+            style={{
+              width: '35%',
+              fontSize: 18,
+              fontFamily: 'serif',
+              color: 'coral',
+            }}>
+            Pending
+          </Text>
+          <Text
+            style={{
+              width: '5%',
+              color: 'black',
+              fontWeight: '900',
+              fontSize: 17,
+            }}>
+            :
+          </Text>
+          <Text
+            style={{
+              width: '60%',
+              fontSize: 18,
+              fontFamily: 'serif',
+              color: '#000',
+            }}>
+            Seller accepted the buyer's order.
+          </Text>
+        </View>
+        <View
+          style={{
+            flexDirection: 'row',
+            alignItems: 'center',
+            paddingVertical: 10,
+          }}>
+          <Text
+            style={{
+              width: '35%',
+              fontSize: 18,
+              fontFamily: 'serif',
+              color: 'crimson',
+            }}>
+            Cancelled
+          </Text>
+          <Text
+            style={{
+              width: '5%',
+              color: 'black',
+              fontWeight: '900',
+              fontSize: 17,
+            }}>
+            :
+          </Text>
+          <Text
+            style={{
+              width: '60%',
+              fontSize: 18,
+              fontFamily: 'serif',
+              color: '#000',
+            }}>
+            Seller Declined buyer's order.
           </Text>
         </View>
         <View
@@ -71,7 +133,7 @@ const BankDetails = () => {
               fontFamily: 'serif',
               color: '#333',
             }}>
-            Branch Name
+            Fulfilled
           </Text>
           <Text
             style={{
@@ -87,112 +149,9 @@ const BankDetails = () => {
               width: '60%',
               fontSize: 18,
               fontFamily: 'serif',
-              color: '#333',
+              color: '#000',
             }}>
-            Raipur
-          </Text>
-        </View>
-        <View
-          style={{
-            flexDirection: 'row',
-            alignItems: 'center',
-            paddingVertical: 10,
-          }}>
-          <Text
-            style={{
-              width: '35%',
-              fontSize: 18,
-              fontFamily: 'serif',
-              color: '#333',
-            }}>
-            Account Number
-          </Text>
-          <Text
-            style={{
-              width: '5%',
-              color: 'black',
-              fontWeight: '900',
-              fontSize: 17,
-            }}>
-            :
-          </Text>
-          <Text
-            style={{
-              width: '60%',
-              fontSize: 18,
-              fontFamily: 'serif',
-              color: '#333',
-            }}>
-            4556987876
-          </Text>
-        </View>
-        <View
-          style={{
-            flexDirection: 'row',
-            alignItems: 'center',
-            paddingVertical: 10,
-          }}>
-          <Text
-            style={{
-              width: '35%',
-              fontSize: 18,
-              fontFamily: 'serif',
-              color: '#333',
-            }}>
-            IFSC
-          </Text>
-          <Text
-            style={{
-              width: '5%',
-              color: 'black',
-              fontWeight: '900',
-              fontSize: 17,
-            }}>
-            :
-          </Text>
-          <Text
-            style={{
-              width: '60%',
-              fontSize: 18,
-              fontFamily: 'serif',
-              color: '#333',
-            }}>
-            876987
-          </Text>
-        </View>
-
-        <View
-          style={{
-            flexDirection: 'row',
-            alignItems: 'center',
-            paddingVertical: 10,
-          }}>
-          <Text
-            style={{
-              width: '35%',
-              fontSize: 18,
-              fontFamily: 'serif',
-              color: '#333',
-            }}>
-            Account Holder Name
-          </Text>
-          <Text
-            style={{
-              width: '5%',
-              color: 'black',
-              fontWeight: '900',
-              fontSize: 17,
-            }}>
-            :
-          </Text>
-          <Text
-            style={{
-              width: '60%',
-              fontSize: 18,
-              fontFamily: 'serif',
-              color: '#333',
-            }}>
-            ABCD XYZ
+            Seller complited buyer's order.
           </Text>
         </View>
       </View>
@@ -200,4 +159,4 @@ const BankDetails = () => {
   );
 };
 
-export default BankDetails;
+export default CropwayGuide;

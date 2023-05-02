@@ -1,10 +1,11 @@
 import React from 'react';
 import {View, Text, TextInput, TouchableOpacity, Image} from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 
-const Register = () => {
+const Register = ({navigation}: any) => {
   return (
-    <>
+    <ScrollView>
       <View style={{paddingTop: 30}}>
         <Text
           style={{
@@ -89,6 +90,7 @@ const Register = () => {
             />
           </View>
           <TouchableOpacity
+          onPress={()=> navigation.navigate("Dashboard")}
             style={{
               borderRadius: 30,
               width: '75%',
@@ -125,7 +127,7 @@ const Register = () => {
           </View>
         </View>
       </View>
-    </>
+    </ScrollView>
   );
 };
 

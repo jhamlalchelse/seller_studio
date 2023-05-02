@@ -1,7 +1,7 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React, {useState} from 'react';
-import HeaderHeading from '../HeaderHeading';
-import BorderBottom from '../BorderBottom';
+import HeaderHeading from '../Dummy/HeaderHeading';
+import BorderBottom from '../Dummy/BorderBottom';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 
 import AntIcon from 'react-native-vector-icons/AntDesign';

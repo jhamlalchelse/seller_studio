@@ -8,6 +8,7 @@ import {
   ScrollView,
 } from 'react-native';
 import styles from '../Styles/Buyer';
+
 const Buyer = ({navigation}: any) => {
   return (
     <>

@@ -1,7 +1,7 @@
 import React from 'react'
 import {View, Text, TouchableHighlight} from 'react-native';
-import HeaderHeading from '../HeaderHeading';
-import BorderBottom from '../BorderBottom';
+import HeaderHeading from '../Dummy/HeaderHeading';
+import BorderBottom from '../Dummy/BorderBottom';
 
 const AddressDetails = () => {
   return (
