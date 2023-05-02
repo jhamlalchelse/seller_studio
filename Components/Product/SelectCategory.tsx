@@ -58,8 +58,7 @@ const SelectCategory = ({navigation}: any) => {
           borderBottomWidth: 1,
           borderBottomColor: '#777',
           marginVertical: 10,
-        }}>
-      </View>
+        }}></View>
       <View
         style={{
           flexDirection: 'row',
@@ -101,12 +100,12 @@ const SelectCategory = ({navigation}: any) => {
         {categoriesData?.map((item, index) => {
           return (
             <TouchableOpacity
-            onPress={() => navigation.navigate("Add Product",{item})}
+              onPress={() => navigation.navigate('Add Product', {item})}
               key={index}
               style={[
                 {
-                  backgroundColor: '#d093c5',
-                  padding: 10,
+                  backgroundColor: '#5f9ea0',
+                  padding: 12,
                   borderRadius: 5,
                   margin: 10,
                 },
@@ -115,7 +114,7 @@ const SelectCategory = ({navigation}: any) => {
                 style={{
                   textAlign: 'center',
                   color: 'white',
-                  fontSize: 16,
+                  fontSize: 17,
                   fontWeight: '800',
                   fontFamily: 'serif',
                 }}>
